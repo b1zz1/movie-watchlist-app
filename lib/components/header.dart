@@ -8,14 +8,22 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
-     leading: IconButton(
+      leading: IconButton(
         icon: const Icon(Icons.menu),
-        // color: const Color(),
+        //t color: const Color(),
         onPressed: () {},
-      )
+    ),
+      title: const Text('Meu Aplicativo'),
+      bottom: const TabBar(
+          tabs: <Widget>[
+            Tab(text: 'Catálogo'),
+            Tab(text: 'Reviews'),
+            Tab(text: 'Watchlist'),
+          ]
+      ),
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + kTextTabBarHeight);
 }
