@@ -6,7 +6,7 @@ import 'package:movie_watchlist_app/screens/movie/reviews.dart';
 import 'package:movie_watchlist_app/screens/user/watchlist.dart';
 //Components
 import 'components/header.dart';
-
+import 'components/sideBar.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -32,6 +32,7 @@ class Layout extends StatelessWidget {
         length: 3,
         child: Scaffold(
             appBar: Header(screenWidth: screenWidth),
+            drawer: SideBar(),
             body: TabBarView(
                 children: [
                   Home(),

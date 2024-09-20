@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Header extends StatelessWidget implements PreferredSizeWidget{
+class Header extends StatelessWidget implements PreferredSizeWidget {
   final double screenWidth;
 
   const Header({super.key, required this.screenWidth});
@@ -11,7 +11,9 @@ class Header extends StatelessWidget implements PreferredSizeWidget{
       leading: IconButton(
         icon: const Icon(Icons.menu),
         //t color: const Color(),
-        onPressed: () {},
+        onPressed: () {
+          Scaffold.of(context).openDrawer();
+        }
     ),
       title: const Text('Meu Aplicativo'),
       bottom: const TabBar(
