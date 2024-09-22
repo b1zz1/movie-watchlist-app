@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// Components
+import 'package:movie_watchlist_app/components/review.dart';
 
 class Reviews extends StatelessWidget {
   const Reviews ({super.key});
@@ -7,7 +9,7 @@ class Reviews extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Center(
-        child: Text('Reviews Page')
+        child: Review()
     );
   }
 }

@@ -1,0 +1,16 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "Mock",
+      "description": "This movie is just a test",
+      "release": "YYYY-MM-DD",
+      "length": 120,
+      "director": "Mock",
+      "score": 4.5,
+      "trailer_url": "https://www.google.com",
+      "watched_by": 69,
+      "reviews": 24
+    }
+  ]
+}
