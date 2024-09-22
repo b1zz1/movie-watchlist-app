@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 // Screens
 import 'package:movie_watchlist_app/screens/home.dart';
-import 'package:movie_watchlist_app/screens/movie/details.dart';
 import 'package:movie_watchlist_app/screens/movie/reviews.dart';
 import 'package:movie_watchlist_app/screens/user/watchlist.dart';
 //Components

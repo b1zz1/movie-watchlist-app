@@ -141,9 +141,7 @@ class _DetailsState extends State<Details> {
                 textAlign: TextAlign.justify,
                 style: TextStyle(fontSize: 16),
               ),
-
               const SizedBox(height: 20),
-
               Text(
                 "Main actors:",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
@@ -154,9 +152,7 @@ class _DetailsState extends State<Details> {
                     : "No information about the actors available.",
                 style: TextStyle(fontSize: 16),
               ),
-
               const SizedBox(height: 20),
-
               Text(
                 "Director:",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
