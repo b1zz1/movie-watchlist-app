@@ -36,8 +36,8 @@ class Layout extends StatelessWidget {
             body: TabBarView(
                 children: [
                   Home(),
-                  Reviews(),
                   Watchlist(),
+                  Reviews(),
                 ]
             )
         )

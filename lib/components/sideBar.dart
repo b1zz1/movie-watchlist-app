@@ -13,7 +13,6 @@ class SideBar extends StatelessWidget {
               const DrawerHeader(
                   child: Row(
                     children:[
-                      ImageIcon()
                       Text('Header barra lateral'),
                     ]
                   )
