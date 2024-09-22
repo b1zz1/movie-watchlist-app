@@ -15,12 +15,12 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
           Scaffold.of(context).openDrawer();
         }
     ),
-      title: const Text('Meu Aplicativo'),
+      title: const Text('Watchlist App'),
       bottom: const TabBar(
           tabs: <Widget>[
-            Tab(text: 'Catálogo'),
-            Tab(text: 'Reviews'),
+            Tab(text: 'Recommended'),
             Tab(text: 'Watchlist'),
+            Tab(text: 'Reviews'),
           ]
       ),
     );
