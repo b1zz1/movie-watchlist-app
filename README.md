@@ -1,5 +1,5 @@
 # Aplicativo de Controle de Filmes
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=7890A8&size=35&center=true&vCenter=true&width=1000&lines=Conheça+o+Watchlist+App!;Saiba+os+filmes+que+mais+estão+em+alta,;Marque+como+visto+aqueles+que+você+já+assistiu,;E+nos+conte+sobre+seus+filmes+favoritos!;Obrigado+pela+atenção+:%29)](https://git.io/typing-svg) 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=7890A8&size=35&center=true&vCenter=true&width=1000&lines=Conheça+o+Watchlist+App*%29;Saiba+os+filmes+que+mais+estão+em+alta,;Marque+como+visto+aqueles+que+você+já+assistiu,;E+nos+conte+sobre+seus+filmes+favoritos!)](https://git.io/typing-svg) 
 
 ## Objetivo
 Este aplicativo mobile permite que o usuário aponte os filmes que já assistiu, adicionando comentários e recebendo recomendações.
