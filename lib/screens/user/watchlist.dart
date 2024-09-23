@@ -11,9 +11,21 @@ class Watchlist extends StatefulWidget {
 
 class _WatchlistState extends State<Watchlist> {
   void _updateWatchlist(int index, bool newValue) {
-    setState(() {
-      MovieData.updateIsWatched(index, newValue); // Atualiza status do filme
-    });
+    // Filtra a lista de filmes assistidos
+    final watchedMovies =
+        MovieData.movieDetails.where((movie) => movie['isWatched']).toList();
+
+    // Encontra o índice correto do filme na lista principal
+    int mainIndex = MovieData.movieDetails
+        .indexWhere((movie) => movie['title'] == watchedMovies[index]['title']);
+
+    // Certifique-se de que o filme foi encontrado na lista original
+    if (mainIndex != -1) {
+      setState(() {
+        // Atualiza o status do filme na lista principal
+        MovieData.updateIsWatched(mainIndex, newValue);
+      });
+    }
   }
 
   @override
@@ -52,7 +64,7 @@ class _WatchlistState extends State<Watchlist> {
                       isWatched: watchedMovies[index]['isWatched'],
                       onIsWatchedChanged: (newValue) {
                         _updateWatchlist(
-                            index, newValue); // Atualiza estado do filme
+                            index, newValue); // Atualiza status do filme
                       },
                     ),
                   ),
