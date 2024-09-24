@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(0.0),
+        padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
@@ -32,6 +32,7 @@ class _HomeState extends State<Home> {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
+                // Navega para a tela de detalhes ao clicar em um card
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -58,7 +59,7 @@ class _HomeState extends State<Home> {
               child: Stack(
                 children: [
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(0.0),
+                    borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
                       MovieData.movieDetails[index]['bannerPath'],
                       fit: BoxFit.cover,
