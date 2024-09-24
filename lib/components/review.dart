@@ -51,12 +51,9 @@ class _ReviewState extends State<Review> {
           padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            // Fit the children
             crossAxisAlignment: CrossAxisAlignment.start,
-            // Align everything to the start
             children: <Widget>[
               IntrinsicHeight(
-                // Ensure Row fits its content
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -130,8 +127,7 @@ class _ReviewState extends State<Review> {
                         ),
                         child: Image.asset(
                           widget.movie.poster,
-                          fit: BoxFit
-                              .cover, // Scale the image to fit within constraints
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
@@ -143,8 +139,7 @@ class _ReviewState extends State<Review> {
                 child: Flexible(
                   child: Text(
                     widget.review.content,
-                    style: TextStyle(
-                        fontSize: 14), // Add smaller font for review text
+                    style: TextStyle(fontSize: 14),
                   ),
                 ),
               ),

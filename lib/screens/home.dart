@@ -32,7 +32,6 @@ class _HomeState extends State<Home> {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
-                // Navega para a tela de detalhes ao clicar em um card
                 Navigator.push(
                   context,
                   MaterialPageRoute(

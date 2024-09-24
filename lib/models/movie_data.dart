@@ -162,6 +162,19 @@ class MovieData {
       "isWatched": true,
       "bannerPath": './assets/images/movie_banners/movie12.jpg',
     },
+    {
+      "title": "Pink Floyd: The Wall",
+      "year": "1982",
+      "rating": "A16",
+      "duration": "1h35min",
+      "actors": "Bob Geldof, Christine Hargreaves, Eleanor David, Alex "
+          "McAvoy, James Laurenson",
+      "directors": "Alan Parker",
+      "description":
+          "Pink Floyd The Wall is a 1982 British live action/adult animated surrealist musical drama film directed by Alan Parker, based on Pink Floyd's 1979 album The Wall. The screenplay was written by Pink Floyd vocalist and bassist Roger Waters. The Boomtown Rats vocalist Bob Geldof made his film debut as rock star Pink, who, driven to neurosis by the pressures of stardom and traumatic events in his life, constructs an emotional and mental wall to protect himself. However, this coping mechanism eventually backfires, and Pink demands to be set free.",
+      "isWatched": true,
+      "bannerPath": './assets/images/movie_banners/movie13.jpg',
+    },
   ];
 
   static void updateIsWatched(int index, bool newValue) {

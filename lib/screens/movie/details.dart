@@ -57,13 +57,11 @@ class _DetailsState extends State<Details> {
     setState(() {
       _isWatched = !_isWatched;
     });
-    // Atualiza o estado do filme na tela anterior
     widget.onIsWatchedChanged(_isWatched);
   }
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     myController.dispose();
     super.dispose();
   }
@@ -72,7 +70,6 @@ class _DetailsState extends State<Details> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor: Colors.black,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
@@ -121,7 +118,7 @@ class _DetailsState extends State<Details> {
                           const SizedBox(width: 8),
                           Container(
                             padding: const EdgeInsets.all(4),
-                            color: Colors.grey,
+                            color: Color(0xFFF0A818),
                             child: Text(
                               widget.movieRating,
                               style: TextStyle(
@@ -145,7 +142,9 @@ class _DetailsState extends State<Details> {
                         icon: Icon(
                           _isWatched ? Icons.visibility : Icons.visibility_off,
                           size: 30,
-                          color: _isWatched ? Colors.green : Colors.red,
+                          color: _isWatched
+                              ? Color(0xFFF0A818)
+                              : Color(0xFF7890A8),
                         ),
                         onPressed: _toggleIsWatched,
                       ),
@@ -202,31 +201,58 @@ class _DetailsState extends State<Details> {
                         date: date.toString(),
                         content: myController.text,
                       ))
-                  : Column(
-                      children: <Widget>[
-                        TextField(
-                          controller: myController,
+                  : Column(children: <Widget>[
+                      TextField(
+                        controller: myController,
+                        cursorColor: Color(0xFFF0A818),
+                        decoration: InputDecoration(
+                          enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Color(
+                                    0xFFF0A818)), // Color when not focused
+                          ),
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Color(0xFFF0A818)), // Color when focused
+                          ),
                         ),
-                        DropdownButton(
-                            value: score,
-                            items: list.map<DropdownMenuItem<int>>((int value) {
-                              return DropdownMenuItem<int>(
-                                value: value,
-                                child: Text(value.toString()),
-                              );
-                            }).toList(),
-                            onChanged: (value) {
-                              setState(() {
-                                score = value!;
-                              });
-                            }),
-                        TextButton(
-                            onPressed: () {
-                              myController != "" ? (hasComment = true) : ();
-                            },
-                            child: Text('Enviar comentário'))
-                      ],
-                    )
+                        style: TextStyle(color: Color(0xFFF0A818)),
+                      ),
+                      SizedBox(height: 12),
+                      Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: <Widget>[
+                            Expanded(
+                              child: FilledButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all(
+                                        Color(0xFFF0A818)),
+                                  ),
+                                  onPressed: () {
+                                    myController != ""
+                                        ? (hasComment = true)
+                                        : ();
+                                  },
+                                  child: Text('Enviar comentário',
+                                      style: TextStyle(color: Colors.white))),
+                            ),
+                            SizedBox(width: 12),
+                            DropdownButton(
+                                value: score,
+                                items: list
+                                    .map<DropdownMenuItem<int>>((int value) {
+                                  return DropdownMenuItem<int>(
+                                    value: value,
+                                    child: Text(value.toString()),
+                                  );
+                                }).toList(),
+                                onChanged: (value) {
+                                  setState(() {
+                                    score = value!;
+                                  });
+                                }),
+                          ]),
+                    ])
             ],
           ),
         ),
