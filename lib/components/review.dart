@@ -1,12 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:movie_watchlist_app/components/starRating.dart';
 
-class Review extends StatelessWidget {
-  final user = './assets/images/avatars/3d_avatar_24.jpg';
-  final banner = './assets/images/movie_banners/Pink_Floyd_–_The_Wall.jpg';
+class UserData {
+  final String picture;
+  final String name;
 
-  const Review({super.key});
+  UserData({required this.picture, required this.name});
+}
 
+class MovieData {
+  final String title;
+  final String release;
+  final String poster;
+
+  MovieData({required this.title, required this.release, required this.poster});
+}
+
+class ReviewData {
+  final double score;
+  final String date;
+  final String content;
+
+  ReviewData({required this.score, required this.date, required this.content});
+}
+
+class Review extends StatefulWidget {
+  final UserData user;
+  final MovieData movie;
+  final ReviewData review;
+
+  const Review({
+    super.key,
+    required this.user,
+    required this.movie,
+    required this.review,
+  });
+
+  @override
+  _ReviewState createState() => _ReviewState();
+}
+
+class _ReviewState extends State<Review> {
   @override
   Widget build(BuildContext context) {
     return Card.outlined(
@@ -34,8 +68,10 @@ class Review extends StatelessWidget {
                         children: <Widget>[
                           ListTile(
                             leading: CircleAvatar(
-                                backgroundImage: AssetImage(user), radius: 16),
-                            title: Text('Eduardo Martins',
+                                backgroundImage:
+                                    AssetImage(widget.user.picture),
+                                radius: 16),
+                            title: Text(widget.user.name,
                                 style: TextStyle(
                                     fontSize: 16, fontWeight: FontWeight.bold)),
                             contentPadding: EdgeInsets.zero,
@@ -45,17 +81,18 @@ class Review extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(bottom: 4),
                             child: Row(
-                              children: const <Widget>[
+                              children: <Widget>[
                                 Flexible(
                                   child: Text(
-                                    'Pink Floyd: The Wall',
-                                    style: TextStyle(
+                                    widget.movie.title,
+                                    style: const TextStyle(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
-                                SizedBox(width: 10),
-                                Text('1982', style: TextStyle(fontSize: 16)),
+                                const SizedBox(width: 10),
+                                Text(widget.movie.release,
+                                    style: const TextStyle(fontSize: 16)),
                               ],
                             ),
                           ),
@@ -72,11 +109,12 @@ class Review extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(bottom: 0),
                             child: Row(
-                              children: const <Widget>[
-                                Icon(Icons.calendar_today_rounded, size: 12),
-                                SizedBox(width: 6),
-                                Text('7 de setembro de 2024',
-                                    style: TextStyle(fontSize: 12)),
+                              children: <Widget>[
+                                const Icon(Icons.calendar_today_rounded,
+                                    size: 12),
+                                const SizedBox(width: 6),
+                                Text(widget.review.date,
+                                    style: const TextStyle(fontSize: 12)),
                               ],
                             ),
                           ),
@@ -91,7 +129,7 @@ class Review extends StatelessWidget {
                           maxWidth: 100.0, // Set max width for the image
                         ),
                         child: Image.asset(
-                          banner,
+                          widget.movie.poster,
                           fit: BoxFit
                               .cover, // Scale the image to fit within constraints
                         ),
@@ -104,9 +142,7 @@ class Review extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 8.0),
                 child: Flexible(
                   child: Text(
-                    'Sed ut perspiciatis unde omnis iste natus error sit '
-                    'voluptatem accusantium doloremque laudantium. Fly me'
-                    ' to the moon and let me live among the stars',
+                    widget.review.content,
                     style: TextStyle(
                         fontSize: 14), // Add smaller font for review text
                   ),
