@@ -27,6 +27,19 @@ Telas do figma
 
 
 ## Modo de Importação
-1. **Instrução:**
+1. **Clonar repositório**
    ```bash
-   <inserir comando>
+   git clone https://github.com/b1zz1/movie-watchlist-app.git
+   ```
+2. **Entrar no repositório**
+    ```bash
+   cd movie-watchlist-app
+   ```
+3. **Adicionar repositório remoto target (este repositório já deve ter sido criado por meio do GitHub)**
+   ```bash
+   git remote add target <link_repositorio>
+   ```
+4. **Enviar a branch main (movie-watchlist-app) para o repositório remoto adicionado anteriormente**
+   ```bash
+   git push target main
+   ```
