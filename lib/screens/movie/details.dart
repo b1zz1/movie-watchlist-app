@@ -100,7 +100,7 @@ class _DetailsState extends State<Details> {
                           const SizedBox(width: 8),
                           Container(
                             padding: const EdgeInsets.all(4),
-                            color: Colors.grey,
+                            color: Color(0xFFF0A818),
                             child: Text(
                               widget.movieRating,
                               style: TextStyle(
@@ -121,10 +121,13 @@ class _DetailsState extends State<Details> {
                   Column(
                     children: [
                       IconButton(
+                        //alignment: Alignment(),
                         icon: Icon(
                           _isWatched ? Icons.visibility : Icons.visibility_off,
                           size: 30,
-                          color: _isWatched ? Colors.green : Colors.red,
+                          color: _isWatched
+                              ? Color(0xFFF0A818)
+                              : Color(0xFF7890A8),
                         ),
                         onPressed: _toggleIsWatched,
                       ),

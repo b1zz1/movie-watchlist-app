@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_watchlist_app/screens/home.dart';
 import 'package:movie_watchlist_app/screens/movie/reviews.dart';
 import 'package:movie_watchlist_app/screens/user/watchlist.dart';
+
 //Components
 import 'components/header.dart';
 import 'components/sideBar.dart';
@@ -10,10 +11,7 @@ import 'components/sideBar.dart';
 void main() {
   runApp(MaterialApp(
     title: 'Flutter Demo',
-    theme: ThemeData(
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      useMaterial3: true,
-    ),
+    theme: ThemeData(brightness: Brightness.dark),
     home: Layout(),
     debugShowCheckedModeBanner: false,
   ));
@@ -32,14 +30,10 @@ class Layout extends StatelessWidget {
         child: Scaffold(
             appBar: Header(screenWidth: screenWidth),
             drawer: SideBar(),
-            body: TabBarView(
-                children: [
-                  Home(),
-                  Watchlist(),
-                  Reviews(),
-                ]
-            )
-        )
-    );
+            body: TabBarView(children: [
+              Home(),
+              Watchlist(),
+              Reviews(),
+            ])));
   }
 }
