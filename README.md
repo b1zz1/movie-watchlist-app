@@ -36,6 +36,25 @@ O escopo abrange os seguintes requisitos principais:
 
 
 ## Modo de Importação
-1. **Instrução:**
+1. **Clonar repositório:**
    ```bash
-   <inserir comando>
+   git clone https://github.com/b1zz1/movie-watchlist-app.git
+   ```
+   Entrar na branch correta
+   ```bash
+   git checkout entrega-n1
+   ```
+
+2. **Instalar dependências e executar:**
+   Caso não esteja instalado, adquira o Flutter SDK
+
+   Este comando irá instalar as dependências do projeto
+   ```bash
+   flutter pub get
+   ```
+   
+   Para finalmente rodar (a primeira execução pode demorar, pelo tempo de compilação)
+   ```bash
+   flutter run
+   ```
+   
