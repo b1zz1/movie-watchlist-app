@@ -139,7 +139,7 @@ class MovieData {
       "bannerPath": './assets/images/movie_banners/movie10.jpg',
     },
     {
-      "title": "How to lose a guy in 10 days",
+      "title": "How to lose a guy in 10",
       "year": "2003",
       "rating": "12",
       "duration": "1h50min",
