@@ -1,4 +1,5 @@
 # Aplicativo de Controle de Filmes Assistidos
+##### Desenvolvido por Eduardo Bizzi Martins e Laura Heloísa Luchez
 [![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=304878&size=35&center=true&vCenter=true&width=1000&lines=Conheça+o+Watchlist+App+:%29;Saiba+os+filmes+que+mais+estão+em+alta,;Marque+como+visto+aqueles+que+você+já+assistiu,;E+nos+conte+sobre+seus+filmes+favoritos!)](https://git.io/typing-svg) 
 
 ## Objetivo
