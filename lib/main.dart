@@ -11,10 +11,7 @@ import 'components/sideBar.dart';
 void main() {
   runApp(MaterialApp(
     title: 'Flutter Demo',
-    theme: ThemeData(
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      useMaterial3: true,
-    ),
+    theme: ThemeData(brightness: Brightness.dark),
     home: Layout(),
     debugShowCheckedModeBanner: false,
   ));
@@ -26,7 +23,6 @@ class Layout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    //final screenHeight = MediaQuery.of(context).size.height;
 
     return DefaultTabController(
         length: 3,

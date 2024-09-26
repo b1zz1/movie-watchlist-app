@@ -10,7 +10,7 @@ UserData myUser = UserData(
 MovieData myMovie = MovieData(
   title: 'Pink Floyd: The Wall',
   release: '1982',
-  poster: './assets/images/movie_banners/Pink_Floyd_–_The_Wall.jpg',
+  poster: './assets/images/movie_banners/movie13.jpg',
 );
 
 ReviewData myReview = ReviewData(
